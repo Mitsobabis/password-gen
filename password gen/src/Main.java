@@ -7,63 +7,52 @@ import java.util.List;
 import java.util.Random;
 
 public class Main {
-    public static java.util.List<String> getList1() {
-        return Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
-    }
-
-    public static java.util.List<String> getList2() {
-        return Arrays.asList("_", "-", ":", ";", ",", "!", "@", "#", "$", "`", "~", "%", "^", "&", "*", "/", "?", ".", "<", ">", "[", "]", "|", "+", "=");
-    }
-
-    public static java.util.List<Integer> getList3() {
-        return Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
-    }
 
     public static String getRngPassword() {
         Random rand = new Random();
         int matches = 0;
 
-        var a = getList1().get(rand.nextInt(getList1().size()));
-        var b = getList1().get(rand.nextInt(getList1().size()));
+        var a = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
+        var b = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
         if (a.equals(b)) matches = matches + 1;
-        var c = getList2().get(rand.nextInt(getList2().size()));
+        var c = Lib.getList2().get(rand.nextInt(Lib.getList2().size()));
         if (b.equals(c) || c.equals(a)) matches = matches + 1;
-        var d = getList1().get(rand.nextInt(getList1().size()));
+        var d = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
         if (c.equals(d) || d.equals(a) || d.equals(b)) matches = matches + 1;
-        var e = getList3().get(rand.nextInt(getList3().size()));
+        var e = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
         if (d.equals(e.toString()) || e.toString().equals(a) || e.toString().equals(b) || e.toString().equals(c))
             matches = matches + 1;
-        var f = getList3().get(rand.nextInt(getList3().size()));
+        var f = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
         if (e.equals(f) || f.toString().equals(a) || f.toString().equals(b) || f.toString().equals(c) || f.toString().equals(d))
             matches = matches + 1;
-        var g = getList2().get(rand.nextInt(getList2().size()));
+        var g = Lib.getList2().get(rand.nextInt(Lib.getList2().size()));
         if (f.toString().equals(g) || g.equals(a) || g.equals(b) || g.equals(c) || g.equals(d) || g.equals(e.toString()))
             matches = matches + 1;
-        var h = getList3().get(rand.nextInt(getList3().size()));
+        var h = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
         if (g.equals(h.toString()) || h.toString().equals(a) || h.toString().equals(b) || h.toString().equals(c) || h.toString().equals(d) || h.equals(e) || h.equals(f))
             matches = matches + 1;
-        var i = getList1().get(rand.nextInt(getList1().size()));
+        var i = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
         if (h.toString().equals(i) || i.equals(a) || i.equals(b) || i.equals(c) || i.equals(d) || i.equals(e.toString()) || i.equals(f.toString()) || i.equals(g))
             matches = matches + 1;
-        var j = getList2().get(rand.nextInt(getList2().size()));
+        var j = Lib.getList2().get(rand.nextInt(Lib.getList2().size()));
         if (i.equals(j) || j.equals(a) || j.equals(b) || j.equals(c) || j.equals(d) || j.equals(e.toString()) || j.equals(f.toString()) || j.equals(g) || j.equals(h.toString()))
             matches = matches + 1;
-        var k = getList1().get(rand.nextInt(getList1().size()));
+        var k = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
         if (j.equals(k) || k.equals(a) || k.equals(b) || k.equals(c) || k.equals(d) || k.equals(e.toString()) || k.equals(f.toString()) || k.equals(g) || k.equals(h.toString()) || k.equals(i))
             matches = matches + 1;
-        var l = getList3().get(rand.nextInt(getList3().size()));
+        var l = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
         if (k.equals(l.toString()) || l.toString().equals(a) || l.toString().equals(b) || l.toString().equals(c) || l.toString().equals(d) || l.equals(e) || l.equals(f) || l.toString().equals(g) || l.equals(h) || l.toString().equals(i) || l.toString().equals(j))
             matches = matches + 1;
-        var m = getList2().get(rand.nextInt(getList2().size()));
+        var m = Lib.getList2().get(rand.nextInt(Lib.getList2().size()));
         if (l.toString().equals(m) || m.equals(a) || m.equals(b) || m.equals(c) || m.equals(d) || m.equals(e.toString()) || m.equals(f.toString()) || m.equals(g) || m.equals(h.toString()) || m.equals(i) || m.equals(j) || m.equals(k))
             matches = matches + 1;
-        var n = getList1().get(rand.nextInt(getList1().size()));
+        var n = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
         if (m.equals(n) || n.equals(a) || n.equals(b) || n.equals(c) || n.equals(d) || n.equals(e.toString()) || n.equals(f.toString()) || n.equals(g) || n.equals(h.toString()) || n.equals(i) || n.equals(j) || n.equals(k) || n.equals(l.toString()))
             matches = matches + 1;
-        var o = getList3().get(rand.nextInt(getList3().size()));
+        var o = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
         if (n.equals(o.toString()) || o.toString().equals(a) || o.toString().equals(b) || o.toString().equals(c) || o.toString().equals(d) || o.equals(e) || o.equals(f) || o.toString().equals(g) || o.equals(h) || o.toString().equals(i) || o.toString().equals(j) || o.toString().equals(k) || o.equals(l) || o.toString().equals(m))
             matches = matches + 1;
-        var p = getList3().get(rand.nextInt(getList3().size()));
+        var p = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
         if (o.equals(p) || p.toString().equals(a) || p.toString().equals(b) || p.toString().equals(c) || p.toString().equals(d) || p.equals(e) || p.equals(f) || p.toString().equals(g) || p.equals(h) || p.toString().equals(i) || p.toString().equals(j) || p.toString().equals(k) || p.equals(l) || p.toString().equals(m) || p.toString().equals(n))
             matches = matches + 1;
         System.out.println("Starting numbers: \n                -" + a + "\n                -" + b + "\n                -" + c + "\n                -" + d + "\n                -" + e + "\n                -" + f + "\n                -" + g + "\n                -" + h + "\n                -" + i + "\n                -" + j + "\n                -" + k + "\n                -" + l + "\n                -" + m + "\n                -" + n + "\n                -" + o + "\n                -" + p);
@@ -71,22 +60,22 @@ public class Main {
             System.out.println("-------------------------------------------------------------------------------\n[LOG] There were some matches found(" + matches + "). Correcting...\n-------------------------------------------------------------------------------");
         }
         while (matches > 0) {
-            a = getList1().get(rand.nextInt(getList1().size()));
-            b = getList1().get(rand.nextInt(getList1().size()));
-            c = getList2().get(rand.nextInt(getList2().size()));
-            d = getList1().get(rand.nextInt(getList1().size()));
-            e = getList3().get(rand.nextInt(getList3().size()));
-            f = getList3().get(rand.nextInt(getList3().size()));
-            g = getList2().get(rand.nextInt(getList2().size()));
-            h = getList3().get(rand.nextInt(getList3().size()));
-            i = getList1().get(rand.nextInt(getList1().size()));
-            j = getList2().get(rand.nextInt(getList2().size()));
-            k = getList1().get(rand.nextInt(getList1().size()));
-            l = getList3().get(rand.nextInt(getList3().size()));
-            m = getList2().get(rand.nextInt(getList2().size()));
-            n = getList1().get(rand.nextInt(getList1().size()));
-            o = getList3().get(rand.nextInt(getList3().size()));
-            p = getList3().get(rand.nextInt(getList3().size()));
+            a = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
+            b = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
+            c = Lib.getList2().get(rand.nextInt(Lib.getList2().size()));
+            d = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
+            e = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
+            f = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
+            g = Lib.getList2().get(rand.nextInt(Lib.getList2().size()));
+            h = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
+            i = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
+            j = Lib.getList2().get(rand.nextInt(Lib.getList2().size()));
+            k = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
+            l = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
+            m = Lib.getList2().get(rand.nextInt(Lib.getList2().size()));
+            n = Lib.getList1().get(rand.nextInt(Lib.getList1().size()));
+            o = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
+            p = Lib.getList3().get(rand.nextInt(Lib.getList3().size()));
             if (!a.equals(b) && !b.equals(c) && !c.equals(a) && !c.equals(d) && !d.equals(a) && !d.equals(b) && !d.equals(e.toString()) && !e.toString().equals(a) && !e.toString().equals(b) && !e.toString().equals(c) && !e.equals(f) && !f.toString().equals(a) && !f.toString().equals(b) && !f.toString().equals(c) && !f.toString().equals(d) && !f.toString().equals(g) && !g.equals(a) && !g.equals(b) && !g.equals(c) && !g.equals(d) && !g.equals(e.toString()) && !g.equals(h.toString()) && !h.toString().equals(a) && !h.toString().equals(b) && !h.toString().equals(c) && !h.toString().equals(d) && !h.equals(e) && !h.equals(f) && !h.toString().equals(i) && !i.equals(a) && !i.equals(b) && !i.equals(c) && !i.equals(d) && !i.equals(e.toString()) && !i.equals(f.toString()) && !i.equals(g) && !i.equals(j) && !j.equals(a) && !j.equals(b) && !j.equals(c) && !j.equals(d) && !j.equals(e.toString()) && !j.equals(f.toString()) && !j.equals(g) && !j.equals(h.toString()) && !j.equals(k) && !k.equals(a) && !k.equals(b) && !k.equals(c) && !k.equals(d) && !k.equals(e.toString()) && !k.equals(f.toString()) && !k.equals(g) && !k.equals(h.toString()) && !k.equals(i) && !k.equals(l.toString()) && !l.toString().equals(a) && !l.toString().equals(b) && !l.toString().equals(c) && !l.toString().equals(d) && !l.equals(e) && !l.equals(f) && !l.toString().equals(g) && !l.equals(h) && !l.toString().equals(i) && !l.toString().equals(j) && !l.toString().equals(m) && !m.equals(a) && !m.equals(b) && !m.equals(c) && !m.equals(d) && !m.equals(e.toString()) && !m.equals(f.toString()) && !m.equals(g) && !m.equals(h.toString()) && !m.equals(i) && !m.equals(j) && !m.equals(k) && !m.equals(n) && !n.equals(a) && !n.equals(b) && !n.equals(c) && !n.equals(d) && !n.equals(e.toString()) && !n.equals(f.toString()) && !n.equals(g) && !n.equals(h.toString()) && !n.equals(i) && !n.equals(j) && !n.equals(k) && !n.equals(l.toString()) && !n.equals(o.toString()) && !o.toString().equals(a) && !o.toString().equals(b) && !o.toString().equals(c) && !o.toString().equals(d) && !o.equals(e) && !o.equals(f) && !o.toString().equals(g) && !o.equals(h) && !o.toString().equals(i) && !o.toString().equals(j) && !o.toString().equals(k) && !o.equals(l) && !o.toString().equals(m) && !o.equals(p) && !p.toString().equals(a) && !p.toString().equals(b) && !p.toString().equals(c) && !p.toString().equals(d) && !p.equals(e) && !p.equals(f) && !p.toString().equals(g) && !p.equals(h) && !p.toString().equals(i) && !p.toString().equals(j) && !p.toString().equals(k) && !p.equals(l) && !p.toString().equals(m) && !p.toString().equals(n)) {
                 matches = 0;
             }
@@ -208,7 +197,7 @@ public class Main {
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(copyselect, null);
 
-        return "Generated Password: " + a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + " and is saved to clipboard.";
+        return copy;
     }
 
     public static void main (String[]args){

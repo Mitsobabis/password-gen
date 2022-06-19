@@ -3,6 +3,9 @@ import java.util.Arrays;
 public class Lib {
     public static String slot1 = "Nothing to display yet";
     public static String slot2 = "Nothing to display yet";
+    public static String slot3 = "Nothing to display yet";
+    public static String slot4 = "Nothing to display yet";
+    public static String slot5 = "Nothing to display yet";
     public static int number = 0;
     public static java.util.List<String> getList1() {
         return Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
